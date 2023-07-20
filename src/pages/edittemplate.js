@@ -1,51 +1,102 @@
 import React from 'react';
-import Image from 'next/image'
 
 export default function edittemplate() {
   return (
-    <main className="relative min-h-screen">
-        <div className="DashboardEditTemplate w-96 h-96 relative bg-white">
-        <div className="Logo left-[239px] top-[19px] absolute text-black text-xl font-bold">LOGO</div>
-        <div className="WelcomeAndi left-[1120px] top-[19px] absolute text-black text-xl font-normal">Welcome, Andi</div>
-        <div className="Rectangle6 w-80 h-10 left-[922px] top-[225px] absolute bg-white border border-black" />
-        <div className="Title left-[922px] top-[199px] absolute text-black text-base font-normal">Title</div>
-        <div className="Rectangle31 w-80 h-10 left-[922px] top-[310px] absolute bg-white border border-black" />
-        <div className="Description left-[922px] top-[284px] absolute text-black text-base font-normal">Description</div>
-        <div className="Image left-[922px] top-[366px] absolute text-black text-base font-normal">Image</div>
-        <div className="Rectangle27 w-36 h-16 left-[887px] top-[2566px] absolute bg-stone-500" />
-        <div className="Rectangle28 w-36 h-16 left-[1090px] top-[2568px] absolute bg-sky-400" />
-        <div className="Rectangle8 w-40 h-10 left-[932px] top-[1211px] absolute bg-black" />
-        <div className="Preview left-[974px] top-[1222px] absolute text-white text-base font-normal">PREVIEW</div>
-        <div className="Rectangle29 w-40 h-10 left-[1095px] top-[1211px] absolute bg-black" />
-        <div className="Publish left-[1138px] top-[1222px] absolute text-white text-base font-normal">PUBLISH</div>
-        <div className="Rectangle33 w-40 h-10 left-[922px] top-[395px] absolute bg-black" />
-        <div className="SelectImage left-[949px] top-[406px] absolute text-white text-base font-normal">Select Image</div>
-        <div className="LoremIpsumTitle left-[455px] top-[244px] absolute text-black text-3xl font-bold">Lorem Ipsum Title</div>
-        <div className="WhatIsLoremIpsumLoremIpsumIsSimplyDummyTextOfThePrintingAndTypesettingIndustry w-96 left-[456px] top-[308px] absolute text-black text-base font-normal">What is Lorem Ipsum?<br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-        <div className="Rectangle30 w-64 h-44 left-[180px] top-[214px] absolute bg-zinc-600" />
-        <div className="Line2 w-96 h-px left-[180px] top-[475px] absolute border border-black"></div>
-        <div className="Rectangle38 w-80 h-10 left-[922px] top-[890px] absolute bg-white border border-black" />
-        <div className="Title left-[922px] top-[864px] absolute text-black text-base font-normal">Title</div>
-        <div className="Rectangle39 w-80 h-10 left-[922px] top-[975px] absolute bg-white border border-black" />
-        <div className="Description left-[922px] top-[949px] absolute text-black text-base font-normal">Description</div>
-        <div className="Image left-[922px] top-[1031px] absolute text-black text-base font-normal">Image</div>
-        <div className="Rectangle40 w-40 h-10 left-[922px] top-[1060px] absolute bg-black" />
-        <div className="SelectImage left-[949px] top-[1071px] absolute text-white text-base font-normal">Select Image</div>
-        <div className="LoremIpsumTitle left-[455px] top-[909px] absolute text-black text-3xl font-bold">Lorem Ipsum Title</div>
-        <div className="WhatIsLoremIpsumLoremIpsumIsSimplyDummyTextOfThePrintingAndTypesettingIndustry w-96 left-[456px] top-[973px] absolute text-black text-base font-normal">What is Lorem Ipsum?<br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-        <div className="Rectangle41 w-64 h-44 left-[180px] top-[879px] absolute bg-zinc-600" />
-        <div className="Line4 w-96 h-px left-[180px] top-[1140px] absolute border border-black"></div>
-        <div className="Rectangle34 w-80 h-10 left-[922px] top-[568px] absolute bg-white border border-black" />
-        <div className="Title left-[922px] top-[542px] absolute text-black text-base font-normal">Title</div>
-        <div className="Rectangle35 w-80 h-10 left-[922px] top-[653px] absolute bg-white border border-black" />
-        <div className="Description left-[922px] top-[627px] absolute text-black text-base font-normal">Description</div>
-        <div className="Image left-[922px] top-[709px] absolute text-black text-base font-normal">Image</div>
-        <div className="Rectangle36 w-40 h-10 left-[922px] top-[738px] absolute bg-black" />
-        <div className="SelectImage left-[949px] top-[749px] absolute text-white text-base font-normal">Select Image</div>
-        <div className="LoremIpsumTitle left-[266px] top-[588px] absolute text-black text-3xl font-bold">Lorem Ipsum Title</div>
-        <div className="WhatIsLoremIpsumLoremIpsumIsSimplyDummyTextOfThePrintingAndTypesettingIndustry w-96 left-[181px] top-[652px] absolute text-right text-black text-base font-normal">What is Lorem Ipsum?<br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-        <div className="Line3 w-96 h-px left-[180px] top-[819px] absolute border border-black"></div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white p-4">
+      <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <span class="ml-3 text-xl">Logo</span>
+          </a>
+          <div class="md:w-1/2 lg:pl-74 md:pl-60 flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <span class="ml-3 text-l">Welcome,Andi</span>
+          </div>
         </div>
+      </header>
+      <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/420x300" />
+          </div>
+          <div class="lg:flex-grow md:w-1/2 d:w-1/2 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Lorem Ipsum Title
+            </h1>
+            <h1 class="mb-8 leading-relaxed">What is Lorem Ipsum?
+              <br class="hidden lg:inline-block" />Lorem Ipsum is simply dummy text of the printing and typesetting industry
+            </h1>
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h2 className="text-black text-base font-normal mb-2">Title</h2>
+            <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <h2 className="text-black text-base font-normal mb-2">Description</h2>
+            <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <h2 className="text-black text-base font-normal mb-2">Image</h2>
+            <div class="flex justify-center">
+              <button class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Select Image</button>
+            </div>
+
+          </div>
+        </div>
+        <div className="Line3 w-83 h-px border border-black"></div>
+      </section>
+      <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Lorem Ipsum Title
+            </h1>
+            <h1 class="mb-8 leading-relaxed">What is Lorem Ipsum?
+              <br class="hidden lg:inline-block" />Lorem Ipsum is simply dummy text of the printing and typesetting industry
+            </h1>
+          </div>
+          <div class="lg:max-w-lg lg:w-full d:w-1/2 md:pl-16 md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/420x300" />
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h2 className="text-black text-base font-normal mb-2">Title</h2>
+            <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <h2 className="text-black text-base font-normal mb-2">Description</h2>
+            <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <h2 className="text-black text-base font-normal mb-2">Image</h2>
+            <div class="flex justify-center">
+              <button class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Select Image</button>
+            </div>
+
+          </div>
+        </div>
+        <div className="Line3 w-83 h-px border border-black"></div>
+      </section>
+      <section class="text-gray-600 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/420x300" />
+          </div>
+          <div class="lg:flex-grow md:w-1/2 d:w-1/2 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Lorem Ipsum Title
+            </h1>
+            <h1 class="mb-8 leading-relaxed">What is Lorem Ipsum?
+              <br class="hidden lg:inline-block" />Lorem Ipsum is simply dummy text of the printing and typesetting industry
+            </h1>
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h2 className="text-black text-base font-normal mb-2">Title</h2>
+            <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <h2 className="text-black text-base font-normal mb-2">Description</h2>
+            <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:ring-2 focus:ring-indigo-200 focus:bg-transparent focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+            <h2 className="text-black text-base font-normal mb-2">Image</h2>
+            <div class="flex justify-center">
+              <button class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Select Image</button>
+            </div>
+          </div>
+        </div>
+        <div className="Line3 w-83 h-px border border-black"></div>
+      </section>
+      <br />
+      <div class="flex w-full md:justify-end">
+        <div>
+          <button class="inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Preview</button>
+          <button class="ml-4 inline-flex text-white bg-black border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Publish</button>
+        </div>
+      </div>
     </main>
   )
 }
