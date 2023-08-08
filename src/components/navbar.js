@@ -35,7 +35,7 @@ export default function Navbar() {
           WB
         </div>
         <div className="items-center justify-center flex-1 hidden gap-4 pl-3 md:flex">
-          <Link href="/edit-template" className="text-base font-normal text-black hover:text-blue-300">Creation</Link>
+          <Link href="/" className="text-base font-normal text-black hover:text-blue-300">Creation</Link>
           <Link href="/landing-page" className="text-base font-normal text-black hover:text-blue-300">Business</Link>
           <Link href="/choose-template" className="text-base font-normal text-black hover:text-blue-300">Growth</Link>
           <Link href="/edit" className="text-base font-normal text-black hover:text-blue-300">Resources</Link>

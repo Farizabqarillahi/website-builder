@@ -19,7 +19,7 @@ export default function LandingPage() {
                         <br />
                         advanced business solutions—we’ve got you covered
                     </p>
-                    <button href='/' className="transform transition duration-500 hover:scale-110 flex items-center justify-center w-[139px] h-[52px] rounded-[26px] bg-white mt-5 text-black">
+                    <button href='/Login' className="transform transition duration-500 hover:scale-110 flex items-center justify-center w-[139px] h-[52px] rounded-[26px] bg-white mt-5 text-black">
                         Get Started
                     </button>
                     <span className='mt-4 text-xs text-white'><a href="/" className="text-white hover:text-blue-300">Try WB. </a>No credit card required.</span>
