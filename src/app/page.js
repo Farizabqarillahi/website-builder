@@ -1,11 +1,15 @@
 import React from 'react';
+import Link from 'next/link';
 import Navbar from '../components/navbar';
-import Image from 'next/image'
+import LandingPage from '../pages/landing-page';
+import Image from 'next/image';
+import 'tailwindcss/tailwind.css';
+
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen">
-    <Navbar/>
+    <main>
+      <LandingPage/>
     </main>
   )
 }
