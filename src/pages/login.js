@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import 'tailwindcss/tailwind.css';
 import { useRouter } from 'next/navigation';
@@ -8,26 +9,58 @@ export default function LoginApp() {
   const [error, setError] = useState('');
   const router = useRouter();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !password) {
       setError('Email dan password harus diisi');
     } else {
-      // cek apakah data yang diinputkan benar
-      if (email === 'user@example.com' && password === 'password') {
-        alert('Login berhasil');
-        router.push('/choose-template');
-      } else {
-        setError('Email atau password salah');
+      try {
+        const response = await fetch({isiLinkApi}, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, password })
+        });
+        const data = await response.json();
+        console.log(data); // log the response data to the console
+        if (data.success) {
+          if (data.adminStatus){
+            alert('Mantap admin');
+            router.push('/edit');
+          } else {
+            alert('Login berhasil');
+            router.push('/trial');
+          }
+        } else {
+          setError(data.message);
+        }
+      } catch (error) {
+        console.error(error);
+        setError('Terjadi kesalahan saat login');
       }
     }
   };
+  
+
+  const validateEmail = (email) => {
+    const emailRegex = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
+    return emailRegex.test(email);
+  };
+
+  function validate(field, regex){
+    if(regex.test(field.value)){
+      field.className = 'valid';
+    }else{
+      field.className = 'invalid';
+    }
+  }
 
   return (
     <div className="flex items-center justify-center h-screen">
       <form onSubmit={handleSubmit} className="w-80">
-        <h1 className="text-2xl mb-4">Login</h1>
-        {error && <p className="text-red-500 mb-2">{error}</p>}
+        <h1 className="mb-4 text-4xl font-bold">Login</h1>
+        {error && <p className="mb-2 text-red-500">{error}</p>}
         <label htmlFor="email" className="block mb-1">
           Email
         </label>
@@ -36,8 +69,9 @@ export default function LoginApp() {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full p-2 border rounded mb-2"
+          className={`w-full p-2 border rounded mb-2 ${email && !validateEmail(email) && 'border-red-500'}`}
         />
+        {email && !validateEmail(email) && <p className="mb-2 text-red-500">Invalid email format</p>}
         <label htmlFor="password" className="block mb-1">
           Password
         </label>
@@ -46,11 +80,17 @@ export default function LoginApp() {
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full p-2 border rounded mb-4"
+          className="w-full p-2 mb-4 border rounded"
         />
-        <button type="submit" className="w-full py-2 bg-blue-500 text-white rounded">
+        <button type="submit" className="w-full py-2 text-white bg-blue-500 rounded">
           Login
         </button>
+        <p className="mt-4 text-center">
+          Don't have an account?{' '}
+          <button onClick={() => router.push('/register')} className="text-blue-500">
+            Sign Up
+          </button>
+        </p>
       </form>
     </div>
   );
