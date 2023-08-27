@@ -1,12 +1,19 @@
+'use client'
 import Image from 'next/image';
 import Navbar from '../components/navbar';
+import { useRouter } from 'next/navigation';
 import 'tailwindcss/tailwind.css';
 
 export default function LandingPage() {
+    const router = useRouter();
+
+    const handleClick = () => {
+    router.push('/register');
+  };
   return (
         <main className="flex flex-col w-screen max-w-full bg-white">
         <Navbar/>
-            {/* Section 1 */}
+            {/* Hero */}
             <section className="w-screen max-w-full min-h-screen py-0 sm:py-10 md:py-10 lg:py-10 xl:py-10 pb-10 bg-[#263a9d] flex items-center justify-center ">
                 <div className="flex flex-col items-center justify-center animate-slide-in-from-left">
                     <span className="mx-auto mt-0 text-6xl font-bold tracking-tight text-center text-white whitespace-normal sm:text-mt-28 md:mt-28 lg:mt-28 xl:mt-28 max-w-8xl font-display sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl">
@@ -19,7 +26,7 @@ export default function LandingPage() {
                         <br />
                         advanced business solutions—we’ve got you covered
                     </p>
-                    <button href='/Login' className="transform transition duration-500 hover:scale-110 flex items-center justify-center w-[139px] h-[52px] rounded-[26px] bg-white mt-5 text-black">
+                    <button onClick={handleClick} className="transform transition duration-500 hover:scale-110 flex items-center justify-center w-[139px] h-[52px] rounded-[26px] bg-white mt-5 text-black">
                         Get Started
                     </button>
                     <span className='mt-4 text-xs text-white'><a href="/" className="text-white hover:text-blue-300">Try WB. </a>No credit card required.</span>
@@ -28,7 +35,7 @@ export default function LandingPage() {
                     </div>
                 </div>
             </section>
-            {/* Section 2 */}
+            {/* section */}
             <section className="flex items-start justify-start w-screen max-w-full mt-20 mb-20 bg-white h-60vh">
             
                 <div className="flex flex-col justify-center gap-8 ml-20 sm:ml-20 md:ml-20 lg:mx-auto xl:mx-auto">
@@ -100,7 +107,7 @@ export default function LandingPage() {
                             </p>
                         </div>
                     </div>
-                    <button href='/' className="transform transition duration-500 hover:scale-110 flex items-center justify-center w-[139px] h-[52px] rounded-[26px] bg-black mt-10 text-white">
+                    <button onClick={handleClick} className="transform transition duration-500 hover:scale-110 flex items-center justify-center w-[139px] h-[52px] rounded-[26px] bg-black mt-10 text-white">
                         Get Started
                     </button>
                 </div>
@@ -118,7 +125,7 @@ export default function LandingPage() {
                         builder.
                     </p>
                     <div className="flex justify-center">
-                        <button href='/' className="transform transition duration-500 hover:scale-110 flex items-center justify-center w-[139px] h-[52px] rounded-[26px] bg-white mt-5 text-black">
+                        <button onClick={handleClick} className="transform transition duration-500 hover:scale-110 flex items-center justify-center w-[139px] h-[52px] rounded-[26px] bg-white mt-5 text-black">
                             Get Started
                         </button>
                     </div>

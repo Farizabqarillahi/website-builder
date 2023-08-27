@@ -15,7 +15,7 @@ export default function LoginApp() {
       setError('Email dan password harus diisi');
     } else {
       try {
-        const response = await fetch({isiLinkApi}, {
+        const response = await fetch('https://courageous-outerwear-ant.cyclic.cloud/auth/login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -27,10 +27,11 @@ export default function LoginApp() {
         if (data.success) {
           if (data.adminStatus){
             alert('Mantap admin');
-            router.push('/edit');
+            router.push('/mysitesadmin');
           } else {
             alert('Login berhasil');
-            router.push('/trial');
+            router.push('/mysitesuser');
+            console.log('user berhasil login')
           }
         } else {
           setError(data.message);
@@ -48,13 +49,13 @@ export default function LoginApp() {
     return emailRegex.test(email);
   };
 
-  function validate(field, regex){
-    if(regex.test(field.value)){
-      field.className = 'valid';
-    }else{
-      field.className = 'invalid';
-    }
-  }
+  // function validate(field, regex){
+  //   if(regex.test(field.value)){
+  //     field.className = 'valid';
+  //   }else{
+  //     field.className = 'invalid';
+  //   }
+  // }
 
   return (
     <div className="flex items-center justify-center h-screen">
@@ -86,7 +87,7 @@ export default function LoginApp() {
           Login
         </button>
         <p className="mt-4 text-center">
-          Don't have an account?{' '}
+          Dont have an account?{' '}
           <button onClick={() => router.push('/register')} className="text-blue-500">
             Sign Up
           </button>

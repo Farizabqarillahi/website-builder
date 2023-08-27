@@ -10,7 +10,7 @@ export default function Navbar() {
   const router = useRouter();
 
   const handleClick = () => {
-    router.push('/login');
+    router.push('/register');
   };
 
   useEffect(() => {
@@ -36,9 +36,9 @@ export default function Navbar() {
         </div>
         <div className="items-center justify-center flex-1 hidden gap-4 pl-3 md:flex">
           <Link href="/" className="text-base font-normal text-black hover:text-blue-300">Creation</Link>
-          <Link href="/landing-page" className="text-base font-normal text-black hover:text-blue-300">Business</Link>
-          <Link href="/choose-template" className="text-base font-normal text-black hover:text-blue-300">Growth</Link>
-          <Link href="/edit" className="text-base font-normal text-black hover:text-blue-300">Resources</Link>
+          <Link href="/" className="text-base font-normal text-black hover:text-blue-300">Business</Link>
+          <Link href="/" className="text-base font-normal text-black hover:text-blue-300">Growth</Link>
+          <Link href="/" className="text-base font-normal text-black hover:text-blue-300">Resources</Link>
           <Link href="/" className="text-base font-normal text-black hover:text-blue-300">Enterprise</Link>
           <Link href="/" className="text-base font-normal text-black hover:text-blue-300">Pricing</Link>
           <Link href="#" className="text-base font-normal text-black hover:text-blue-300">Home</Link>
