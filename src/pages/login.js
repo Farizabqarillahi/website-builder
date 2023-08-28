@@ -92,10 +92,10 @@ export default function LoginApp() {
             Sign Up
           </button>
         </p>
+        <div className="text-sm text-[#0000FF] mt-8">HINT</div>
+        <div className="text-sm text-black">Email    : zahrandi@gmail.com</div>
+        <div className="text-sm text-black">Password : 123456Be</div>
       </form>
-      <div className="text-sm text-black">HINT</div>
-      <div className="text-sm text-black">Email    : zahrandi@gmail.com</div>
-      <div className="text-sm text-black">Password : 123456Be</div>
     </div>
   );
 }
