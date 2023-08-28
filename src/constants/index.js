@@ -27,7 +27,7 @@ export const contentData = [
         dlabel: 'Deskripsi',
         description: 'Hutan adalah sebuah lahan lapang yang didominasi oleh pepohonan yang banyak dan menjadi ...',
         rlabel: 'link destinasi',
-        route: '#',
+        route: 'https://id.wikipedia.org/wiki/Hutan',
         image: 'https://source.unsplash.com/random/500x400/?forest',
         imglabel: 'Gambar 1'
     },
@@ -40,7 +40,7 @@ export const contentData = [
         dlabel: 'Deskripsi',
         description: 'Pantai adalah wilayah perbatasan antara daratan dengan lautan. Pantai terdiri dari pasir ...',
         rlabel: 'link destinasi',
-        route: '#',
+        route: 'https://id.wikipedia.org/wiki/Pantai',
         image: 'https://source.unsplash.com/random/500x400/?beach',
         imglabel: 'Gambar 2'
     },
@@ -53,7 +53,7 @@ export const contentData = [
         dlabel: 'Deskripsi',
         description: 'Galaksi adalah salah satu yang terbesar hal di alam semesta. Mereka begitu besar sehingga...',
         rlabel: 'link destinasi',
-        route: '#',
+        route: 'https://id.wikipedia.org/wiki/Galaksi',
         image: 'https://source.unsplash.com/random/500x400/?galaxy',
         imglabel: 'Gambar 3'
     }
