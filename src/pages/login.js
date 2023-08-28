@@ -93,6 +93,9 @@ export default function LoginApp() {
           </button>
         </p>
       </form>
+      <div className="text-sm text-black">HINT</div>
+      <div className="text-sm text-black">Email    : zahrandi@gmail.com</div>
+      <div className="text-sm text-black">Password : 123456Be</div>
     </div>
   );
 }
